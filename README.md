@@ -1,17 +1,17 @@
-## Użytkownicy i firmy
+## Users and companies
 
 ```
-Zadanie polega na wyświetleniu listy firm i podlegających im użytkowników.
-Źródło danych to plik db.json, który należy zaserwować używając paczki json-server
+The task is to display a list of companies and their users
+Data source is a db.json file that you need to serve using json-server
 ```
 ---
 
-#### Kroki potrzebne do wykonania zadania:
-1. Zainstalowanie potrzebnych paczek używając **NPM**
-2. Pobranie danych dotyczących użytkowników i firm
-3. Umieszczenie danych w odpowiednich strukturach
-4. Odpowiednie ich przetworzenie i wyświetlenie używając styli **Bootstrap**:
-    - Posortowanie listy firm **rosnąco według ilości użytkowników** oraz wyświetlenie ich liczby
-    - Wyświetlenie listy firm z możliwością rozwinięcia listy użytkowników z danej firmy zawierającej **imiona** i adresy **email**
+#### Steps to finish the task:
+1. Install necessary packages using *NPM*
+2. Fetch users and companies data
+3. Place them in appropriate structures
+4. Parse the data and display it in tables using **Bootstrap**
+    - Sort the list of companies **ascending according to the number of users** and show the number of the users
+    - Display the list of companies with the possibility to expand the list of users of a certain company (show **names** and **emails**)
 
-Należy utworzyć nowy branch, a po zakończeniu pracy wysłać **pull request** do brancha master
+Create a new branch and at the end of the work create a **pull request** to master
