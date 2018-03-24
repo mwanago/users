@@ -20,8 +20,8 @@ module.exports = {
       "error",
       "always"
     ],
-    "no-console": 1,
-    "no-debugger": 1,
+    "no-console": 2,
+    "no-debugger": 2,
     "space-before-blocks": 2,
     "no-var": 2
   }
