@@ -20,7 +20,7 @@ module.exports = {
       "error",
       "always"
     ],
-    "no-console": true,
-    "no-debugger": true
+    "no-console": 2,
+    "no-debugger": 2
   }
 };
