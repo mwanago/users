@@ -12,12 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/
+        test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/
       },
       {
         test: /\.scss$/,
@@ -29,7 +24,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|woff|woff2)$/,
-        loader: "url-loader?limit=10000&minetype=application/font-woff"
+        loader: 'url-loader?limit=10000&minetype=application/font-woff'
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
@@ -37,18 +32,14 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 40000
+              limit: 5000
             }
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {}
           }
         ]
       }
     ],
   },
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: 'app/index.html'
