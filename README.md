@@ -1,9 +1,8 @@
 ## Users and companies
 
-```
+
 The task is to display a list of companies and their users
-Data source is a db.json file that you need to serve using json-server
-```
+Data source is a db.json file that you need to serve using [json-server](https://www.npmjs.com/package/json-server).
 ---
 
 #### Steps to finish the task:
