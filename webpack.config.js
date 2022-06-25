@@ -1,48 +1,36 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: {
-    bundle: './app/index.js'
-  },
+  entry: './app/index.js',
   output: {
-    filename: '[name].[hash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './dist'),
+    filename: '[name].[chunkhash].bundle.js',
   },
+  mode: 'development',
+  plugins: [new HtmlWebpackPlugin({ template: './app/index.html' })],
   module: {
     rules: [
       {
-        test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.(png|jpg|gif|svg)$/,
+        type: 'asset/resource',
       },
       {
-        test: /\.(ttf|eot|woff|woff2)$/,
-        loader: 'url-loader?limit=10000&minetype=application/font-woff'
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.html$/,
         use: [
           {
-            loader: 'url-loader',
-            options: {
-              limit: 5000
-            }
+            loader: 'html-loader',
           }
-        ]
-      }
+        ],
+      },
     ],
   },
-  devtool: 'eval-source-map',
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'app/index.html'
-    })
-  ]
 };
