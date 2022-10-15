@@ -1,3 +1,22 @@
 @import 'variables';
 @import 'global';
 @import 'heading';
+
+body {
+  padding-top: 30px
+}
+
+.list-group-item {
+  padding: 5px 10px
+}
+ul {
+  text-align: left;
+  list-style-position: inside;
+}
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.btn {
+  margin-left: 15px;
+}
